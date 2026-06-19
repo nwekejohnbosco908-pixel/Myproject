@@ -205,17 +205,20 @@ function stopTyping() {
   }
 }
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  emailjs
-    .sendForm("service_23f4cip", "template_2n8kfb5", this)
-    .then(() => {
-      alert("Message sent!");
-      this.reset();
-    })
-    .catch((err) => {
-      console.log(err);
-      alert("Failed to send message");
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs
+        .sendForm("service_23f4cip", "template_2n8kfb5", this)
+        .then(() => {
+          alert("Message Sent!");
+          this.reset();
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Failed to send message");
+        });
     });
 });
