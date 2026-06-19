@@ -301,7 +301,7 @@
             </div>
           </div>
 
-          <form class="contact-form fade-in delay-2" id="contact-form" novalidate>
+          <form class="contact-form fade-in delay-2" id="contactForm" novalidate>
             <div class="form-group">
               <label for="contact-name">
                 Name
@@ -309,7 +309,7 @@
               <input 
                 id="contact-name"
                 type="text" 
-                name="name" 
+                name="from_name" 
                 placeholder="Your name" 
                 required 
                 aria-required="true"
@@ -323,7 +323,7 @@
               <input 
                 id="contact-email"
                 type="email" 
-                name="email" 
+                name="from_email" 
                 placeholder="you@example.com" 
                 required 
                 aria-required="true"
@@ -349,6 +349,10 @@
           </form>
         </div>
       </section>
+
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>emailjs.init("ESH_OuflHC8hdzcE6");</script>
+
     </main>
 
     <!-- Footer -->
